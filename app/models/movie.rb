@@ -9,7 +9,14 @@ class Movie < ApplicationRecord
     #In order to connect movies and actors we have to do it through performs
     has_many :actors, through: :performs
 
-    def count_reviews
-        return self.reviews.count
+    def average_rating
+        if self.reviews.count == 0
+            return 0
+        end
+        stars_sum = 0
+        self.reviews.each do |r|
+            stars_sum += r.stars
+        end
+        return stars_sum / self.reviews.count
     end
 end

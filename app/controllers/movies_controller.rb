@@ -13,7 +13,8 @@ class MoviesController < ApplicationController
     end
 
     def create
-        Movie.create(title: movie_params[:title], genre: movie_params[:genre], year: movie_params[:year], length: movie_params[:length])
+        #Movie.create(title: movie_params[:title], genre: movie_params[:genre], year: movie_params[:year], length: movie_params[:length])
+        Movie.create(movie_params)
         redirect_to movies_path
     end
 

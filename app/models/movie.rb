@@ -6,8 +6,10 @@ class Movie < ApplicationRecord
     #One actor many performs
     #One movie many performs
     has_many :performs
+    has_many :orders
     #In order to connect movies and actors we have to do it through performs
     has_many :actors, through: :performs
+    has_many :users, through: :orders
 
     def average_rating
         if self.reviews.count == 0

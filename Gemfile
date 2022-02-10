@@ -56,4 +56,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem "stripe", "~> 5.43"
+gem 'stripe'
+gem 'dotenv-rails', :groups => [:development, :test]

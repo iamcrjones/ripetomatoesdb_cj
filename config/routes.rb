@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :reviews, only:[:new, :create]
     resources :orders, only:[:new, :create]
   end
-
+  get '/myorders', to: 'orders#index', as: 'my_orders'
   get "/actors", to: "actors#index"
 end

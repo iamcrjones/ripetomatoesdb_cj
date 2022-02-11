@@ -24,8 +24,8 @@ class OrdersController < ApplicationController
         puts charge
         @order = Order.create(movie: @movie, user: current_user, price: @movie.price, receipt_url: charge.receipt_url)
         rescue Stripe::CardError => e
-            flash[:error] = e.message
-        redirect_to movie_path(@movie.id)
+            #flash[:error] = e.message
+        redirect_to movie_path(@movie.id), alert: e.message
     end
 
     def find_movie

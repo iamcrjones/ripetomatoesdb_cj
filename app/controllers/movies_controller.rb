@@ -24,6 +24,13 @@ class MoviesController < ApplicationController
         end
     end
 
+    def destroy
+        title = @movie.title
+        @movie.destroy
+        #Movie.destroy(params[:id])
+        redirect_to movies_path, notice: "#{title} deleted successfully"
+    end
+
     def find_movie
         begin
             @movie = Movie.find(params[:id])

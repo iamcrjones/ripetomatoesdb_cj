@@ -1,0 +1,11 @@
+development:
+  cloud_name: "iamcrjones"
+  api_key: "892322836928533"
+  api_secret: "uPtVE7R2-4rEFc82Xq4WnQGxtVM"
+  secure: true
+
+production:
+  cloud_name: "iamcrjones"
+  api_key: "892322836928533"
+  api_secret: "uPtVE7R2-4rEFc82Xq4WnQGxtVM"
+  secure: true

@@ -62,5 +62,6 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 
 gem "aws-sdk-s3", "~> 1.112"
+gem 'aws-sdk'
 
 gem 'cloudinary'
